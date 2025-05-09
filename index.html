@@ -37,31 +37,23 @@
       font-weight: bold;
       font-size: 16px;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 40px 20px;
     }
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--secondary);
-      display: inline-block;
-      padding-bottom: 5px;
-    }
     .product-card {
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 25px;
+      padding: 20px;
       margin-bottom: 30px;
-      transition: transform 0.3s ease;
+      text-align: center;
     }
-    .product-card:hover {
-      transform: translateY(-5px);
+    .product-card img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
     }
     .order-button {
       background-color: var(--secondary);
@@ -72,19 +64,11 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .order-button:hover {
+      background-color: #c38e4c;
     }
     footer {
       background-color: var(--primary);
@@ -100,48 +84,75 @@
 <header></header>
 
 <nav>
-  <a href="#belgian">Бельгийский шоколад</a>
-  <a href="#dubai">Дубайский шоколад</a>
-  <a href="#gallery">Галерея вкуса</a>
+  <a href="#">Продукция</a>
 </nav>
 
 <div class="container">
-  <section id="belgian">
-    <h2 class="section-title">Бельгийский шоколад</h2>
-    <div class="product-card">
-      <h3>Шоколад с узорами</h3>
-      <p>Элегантные плитки с изысканными узорами. Каждый шоколад — с уникальным вкусом.</p>
-      <button class="order-button" onclick="alert('Вы выбрали: Бельгийский шоколад\nСумма: 12 ₼\nКарта: 4004 1234 5678 0001')">Заказать</button>
-    </div>
-  </section>
+  <!-- Каждый блок — одно фото с кнопкой -->
+  <div class="product-card">
+    <img src="1ddbffe0-0a95-4e15-a72b-221b03091afa.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
 
-  <section id="dubai">
-    <h2 class="section-title">Дубайский шоколад</h2>
-    <div class="product-card">
-      <h3>Шоколад с фисташками</h3>
-      <p>Украшен фисташками сверху и наполнен фисташками внутри. Настоящая восточная роскошь.</p>
-      <button class="order-button" onclick="alert('Вы выбрали: Дубайский шоколад\nСумма: 15 ₼\nКарта: 4004 1234 5678 0001')">Заказать</button>
-    </div>
-  </section>
+  <div class="product-card">
+    <img src="3b1fe1fa-a9c8-48ce-9e97-01cbf1f14ab4.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
 
-  <section id="gallery">
-    <h2 class="section-title" style="text-align:center;">Галерея вкуса</h2>
-    <div class="gallery">
-      <img src="1ddbffe0-0a95-4e15-a72b-221b03091afa.jpeg" alt="">
-      <img src="3b1fe1fa-a9c8-48ce-9e97-01cbf1f14ab4.jpeg" alt="">
-      <img src="4fadcab2-63eb-4cc3-a34c-2ddd8fc0503b.jpeg" alt="">
-      <img src="8dc31781-32d0-4d28-b191-d80dc8b1539f.jpeg" alt="">
-      <img src="a1df5651-46ab-4f43-8cdf-5960a39a589b.jpeg" alt="">
-      <img src="a2c8142c-c3b5-41d6-b39e-ba885c3f681d.jpeg" alt="">
-      <img src="a6037883-84ff-4158-bbc3-15bfd8ad7bef.jpeg" alt="">
-      <img src="c1f14ee0-6af7-48d9-814b-4d04b717541b.jpeg" alt="">
-      <img src="c3581050-532b-4bce-935a-f49f2fbf871f.jpeg" alt="">
-      <img src="c359e669-9896-4eca-b81a-4b03a98c9e14.jpeg" alt="">
-      <img src="c4278983-d561-4dc1-a1ff-52631ddecdc8.jpeg" alt="">
-      <img src="d7e2755b-d556-41cc-9a7a-861378ee058b.jpeg" alt="">
-      <img src="da25d3c7-1b73-4165-b762-ee447c7c49b8.jpeg" alt="">
-    </div>
-  </section>
+  <div class="product-card">
+    <img src="4fadcab2-63eb-4cc3-a34c-2ddd8fc0503b.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="8dc31781-32d0-4d28-b191-d80dc8b1539f.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="a1df5651-46ab-4f43-8cdf-5960a39a589b.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="a2c8142c-c3b5-41d6-b39e-ba885c3f681d.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="a6037883-84ff-4158-bbc3-15bfd8ad7bef.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="c1f14ee0-6af7-48d9-814b-4d04b717541b.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="c3581050-532b-4bce-935a-f49f2fbf871f.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="c359e669-9896-4eca-b81a-4b03a98c9e14.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="c4278983-d561-4dc1-a1ff-52631ddecdc8.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="d7e2755b-d556-41cc-9a7a-861378ee058b.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
+
+  <div class="product-card">
+    <img src="da25d3c7-1b73-4165-b762-ee447c7c49b8.jpeg" alt="">
+    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
+  </div>
 </div>
 
 <footer>
