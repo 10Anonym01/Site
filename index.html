@@ -24,50 +24,69 @@
       background: url('18ca700f-8e75-4dd2-8ffd-0932a61c7329.jpeg') center/contain no-repeat,
                   linear-gradient(90deg, var(--primary), #3e2a1e);
       height: 200px;
+      position: relative;
     }
-    nav {
-      background-color: var(--secondary);
-      text-align: center;
-      padding: 15px 0;
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
-    nav a {
+    .lang-switcher select {
+      padding: 6px 10px;
+      background: var(--secondary);
+      border: none;
+      border-radius: 5px;
       color: white;
-      text-decoration: none;
-      margin: 0 20px;
       font-weight: bold;
-      font-size: 16px;
     }
     .container {
       max-width: 1100px;
       margin: auto;
       padding: 40px 20px;
     }
+    .section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
     .product-card {
+      width: 300px;
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 30px;
+      overflow: hidden;
       text-align: center;
+      padding: 20px;
     }
     .product-card img {
       width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin-bottom: 10px;
+      border-radius: 8px;
     }
     .order-button {
       background-color: var(--secondary);
       color: white;
       border: none;
       padding: 10px 20px;
+      margin-top: 15px;
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
       text-decoration: none;
-      display: block;
-      margin: 10px auto 0;
-      width: fit-content;
+      display: inline-block;
     }
     .order-button:hover {
       background-color: #c38e4c;
@@ -77,76 +96,102 @@
       color: white;
       text-align: center;
       padding: 25px 10px;
-      margin-top: 40px;
+    }
+    a {
+      color: white;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-<header></header>
-
-<nav>
-  <a href="#">Продукция</a>
-</nav>
+<header>
+  <div class="lang-switcher">
+    <select onchange="changeLanguage(this.value)">
+      <option value="ru">Русский</option>
+      <option value="az">Azərbaycanca</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+</header>
 
 <div class="container">
-  <div class="product-card">
-    <img src="1ddbffe0-0a95-4e15-a72b-221b03091afa.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="3b1fe1fa-a9c8-48ce-9e97-01cbf1f14ab4.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="4fadcab2-63eb-4cc3-a34c-2ddd8fc0503b.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="8dc31781-32d0-4d28-b191-d80dc8b1539f.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="a1df5651-46ab-4f43-8cdf-5960a39a589b.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="a2c8142c-c3b5-41d6-b39e-ba885c3f681d.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="a6037883-84ff-4158-bbc3-15bfd8ad7bef.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="c1f14ee0-6af7-48d9-814b-4d04b717541b.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="c3581050-532b-4bce-935a-f49f2fbf871f.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="c359e669-9896-4eca-b81a-4b03a98c9e14.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="c4278983-d561-4dc1-a1ff-52631ddecdc8.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="d7e2755b-d556-41cc-9a7a-861378ee058b.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
-  <div class="product-card">
-    <img src="da25d3c7-1b73-4165-b762-ee447c7c49b8.jpeg" alt="">
-    <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button">Заказать</a>
-  </div>
+  <section class="section" id="about">
+    <h2 data-translate="about_title">О компании</h2>
+    <p data-translate="about_text">
+      Мы — молодая и креативная компания, занимающаяся производством шоколада ручной работы. Начав работу в этом году, мы с первого дня стремимся создавать продукты, которые радуют вкусом и оформлением. Попробовав наш шоколад, вы не пожалеете — мы вкладываем в каждую плитку душу.
+    </p>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2 data-translate="gallery_title">Наши продукты</h2>
+    <div class="gallery">
+      <!-- Пример одной карточки -->
+      <div class="product-card">
+        <img src="1ddbffe0-0a95-4e15-a72b-221b03091afa.jpeg" alt="">
+        <a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a>
+      </div>
+
+      <!-- Повтори остальные карточки по шаблону: -->
+      <div class="product-card"><img src="3b1fe1fa-a9c8-48ce-9e97-01cbf1f14ab4.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="4fadcab2-63eb-4cc3-a34c-2ddd8fc0503b.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="8dc31781-32d0-4d28-b191-d80dc8b1539f.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="a1df5651-46ab-4f43-8cdf-5960a39a589b.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="a2c8142c-c3b5-41d6-b39e-ba885c3f681d.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="a6037883-84ff-4158-bbc3-15bfd8ad7bef.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="c1f14ee0-6af7-48d9-814b-4d04b717541b.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="c3581050-532b-4bce-935a-f49f2fbf871f.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="c359e669-9896-4eca-b81a-4b03a98c9e14.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="c4278983-d561-4dc1-a1ff-52631ddecdc8.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="d7e2755b-d556-41cc-9a7a-861378ee058b.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+      <div class="product-card"><img src="da25d3c7-1b73-4165-b762-ee447c7c49b8.jpeg" alt=""><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank" class="order-button" data-translate="order_btn">Заказать</a></div>
+    </div>
+  </section>
+
+  <section class="section" id="contacts">
+    <h2 data-translate="contacts_title">Контакты</h2>
+    <p><a href="https://www.instagram.com/onlymesweetsbaku/" target="_blank">@onlymesweetsbaku</a></p>
+  </section>
 </div>
 
 <footer>
   <p>© 2025 Only Me Sweets Baku. Все права защищены.</p>
 </footer>
+
+<script>
+  const translations = {
+    en: {
+      about_title: "About Us",
+      about_text: "We are a young and creative company producing handmade chocolate. Started this year, we aim to create products that bring joy through taste and presentation. You won’t regret trying our chocolate — we put heart into every piece.",
+      contacts_title: "Contacts",
+      gallery_title: "Our Products",
+      order_btn: "Order"
+    },
+    az: {
+      about_title: "Haqqımızda",
+      about_text: "Biz bu il fəaliyyətə başlayan gənc və yaradıcı bir şirkətik. Əl işi şokoladlar istehsal edirik və hər məhsulda zövq və keyfiyyəti birləşdiririk. Bizim şokoladı daddıqdan sonra seçim etdiyinizə peşman olmayacaqsınız — hər plitəyə sevgi qatırıq.",
+      contacts_title: "Əlaqə",
+      gallery_title: "Məhsullarımız",
+      order_btn: "Sifariş et"
+    },
+    ru: {
+      about_title: "О компании",
+      about_text: "Мы — молодая и креативная компания, занимающаяся производством шоколада ручной работы. Начав работу в этом году, мы с первого дня стремимся создавать продукты, которые радуют вкусом и оформлением. Попробовав наш шоколад, вы не пожалеете — мы вкладываем в каждую плитку душу.",
+      contacts_title: "Контакты",
+      gallery_title: "Наши продукты",
+      order_btn: "Заказать"
+    }
+  };
+
+  function changeLanguage(lang) {
+    document.querySelectorAll('[data-translate]').forEach(el => {
+      const key = el.getAttribute('data-translate');
+      if (translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
